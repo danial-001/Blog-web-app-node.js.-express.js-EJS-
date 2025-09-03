@@ -5,14 +5,17 @@
   <p><%= post.desc %></p>
   <p>Post created at: <%= post.time.toLocaleString() %></p>
   <p><strong><%= post.auth %></strong></p>
-  <form action="/delete" method="POST">
-    <input type="hidden" name="postIndex" value="<%= index %>" />
-    <button type="submit">Delete</button>
-  </form>
-  <form action="/edit" method="GET">
-    <input type="hidden" name="postIndex" value="<%= index %>" />
-    <button type="submit">Edit</button>
-  </form>
+  <div class="buttons">
+    <form action="/delete" method="POST">
+      <input type="hidden" name="postIndex" value="<%= index %>" />
+      <button class="delete-button" type="submit">Delete</button>
+    </form>
+    <form action="/edit" method="GET">
+      <input type="hidden" name="postIndex" value="<%= index %>" />
+      <button class="edit-button" type="submit">Edit</button>
+    </form>
+  </div>
+
   <hr />
 </div>
 

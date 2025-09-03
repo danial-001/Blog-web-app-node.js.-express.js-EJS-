@@ -1,0 +1,50 @@
+html {
+  font-size: 16px;
+}
+body {
+  background-color: #dadada;
+}
+.post {
+  font-family: "Roboto", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 300;
+  font-style: normal;
+  font-variation-settings: "wdth" 100;
+  width: 95%;
+  margin-left: auto;
+  margin-right: auto;
+  padding: 2rem;
+  text-align: justify;
+  margin-top: 1rem;
+  background-color: #343a40;
+  color: whitesmoke;
+  border-radius: 1rem;
+  box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px,
+    rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px,
+    rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
+}
+footer {
+  position: relative;
+  top: 2rem;
+  bottom: 0;
+  background-color: #212529;
+  height: 3rem;
+  color: whitesmoke;
+  padding: 1rem;
+}
+.buttons {
+  display: flex;
+}
+.edit-button {
+  margin-left: 1rem;
+  border-style: none;
+  border-radius: 5px;
+  color: whitesmoke;
+  background-color: #1e7400;
+}
+.delete-button {
+  border-radius: 5px;
+  border-style: none;
+  color: whitesmoke;
+  background-color: #8d2222;
+}
