@@ -1,0 +1,21 @@
+<%- include("partials/header.ejs") %> <% if (blog_post && blog_post.length > 0)
+{ %> <% blog_post.forEach((post,index) => { %>
+<div class="post">
+  <h2><%= post.blog_title %></h2>
+  <p><%= post.desc %></p>
+  <p>Post created at: <%= post.time.toLocaleString() %></p>
+  <p><strong><%= post.auth %></strong></p>
+  <form action="/delete" method="POST">
+    <input type="hidden" name="postIndex" value="<%= index %>" />
+    <button type="submit">Delete</button>
+  </form>
+  <form action="/edit" method="GET">
+    <input type="hidden" name="postIndex" value="<%= index %>" />
+    <button type="submit">Edit</button>
+  </form>
+  <hr />
+</div>
+
+<% }) %> <% } else { %>
+<h1>No data found!</h1>
+<% } %> <%- include("partials/footer.ejs") %>

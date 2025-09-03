@@ -1,0 +1,17 @@
+<%- include("partials/header.ejs") %>
+
+<h2>Editing post</h2>
+<form action="/update" method="POST">
+  <input type="hidden" name="postIndex" value="<%= index %>" />
+  <input
+    type="text"
+    name="blog_title"
+    value="<%= post.blog_title %>"
+    required
+  />
+  <input type="text" name="desc" value="<%= post.desc %>" required />
+  <input type="text" name="auth" value="<%= post.auth %>" required />
+  <input type="text" naeme="time" value="<%= post.time %>" readonly />
+  <input type="submit" value="Edit" />
+</form>
+<%- include("partials/footer.ejs") %>
